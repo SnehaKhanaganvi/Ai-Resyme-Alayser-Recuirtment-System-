@@ -1,8 +1,8 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from ai_logic import extract_text_from_pdf, analyze_resume
+import io
 
 app = FastAPI(title="AI Resume Analyzer API 🚀")
-
 
 @app.get("/")
 def home():
@@ -15,13 +15,12 @@ async def analyze(
     job_description: str = Form(...)
 ):
     try:
-        # Read file
         contents = await file.read()
 
-        # Extract text
-        resume_text = extract_text_from_pdf(file.file)
+        pdf_file = io.BytesIO(contents)
 
-        # Analyze
+        resume_text = extract_text_from_pdf(pdf_file)
+
         result = analyze_resume(resume_text, job_description)
 
         return {

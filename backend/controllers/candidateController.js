@@ -1,7 +1,8 @@
 const Job = require('../models/Job');
 const Application = require('../models/Application');
 const Notification = require('../models/Notification');
-const { analyzeResume } = require('../utils/aiService');
+const axios = require('axios');
+const FormData = require('form-data');
 const fs = require('fs');
 
 // @desc    Get all jobs
@@ -37,13 +38,21 @@ exports.applyJob = async (req, res) => {
       return res.status(404).json({ message: 'Job not found' });
     }
 
-    // Simulate reading resume text (in reality, you'd extract text from PDF)
-    // For mock, we just use the file name as placeholder
-    const resumeText = `Resume for ${req.user.name}`;
 
     // Call AI analysis
-    const analysis = await analyzeResume(job.skills, resumeText);
+    const formData = new FormData();
+    formData.append("file", fs.createReadStream(req.file.path));
+    formData.append("job_description", job.description);
 
+    const aiResponse = await axios.post(
+      "http://localhost:8000/analyze",
+      formData,
+      {
+        headers: formData.getHeaders()
+      }
+    );
+
+    const analysis = aiResponse.data.data;
     // Create application
     const application = await Application.create({
       userId: req.user.id,
