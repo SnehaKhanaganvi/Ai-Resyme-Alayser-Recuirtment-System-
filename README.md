@@ -1,10 +1,4 @@
-Perfect 🔥 — I’ll give you **professional README + .gitignore** ready for GitHub & placement.
 
----
-
-# 📄 ✅ README.md (COPY THIS)
-
-```md
 # 🚀 AI Resume Analyzer & Recruitment System
 
 An AI-powered recruitment platform that automates resume screening, candidate evaluation, and hiring workflow using Node.js, React, MongoDB, and Python (FastAPI).
