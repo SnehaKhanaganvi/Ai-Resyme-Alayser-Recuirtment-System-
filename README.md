@@ -1,13 +1,11 @@
-Perfect 🔥 — I’ll give you **professional README + .gitignore** ready for GitHub & placement.
 
----
-
-# 📄 ✅ README.md (COPY THIS)
-
-```md
 # 🚀 AI Resume Analyzer & Recruitment System
 
 An AI-powered recruitment platform that automates resume screening, candidate evaluation, and hiring workflow using Node.js, React, MongoDB, and Python (FastAPI).
+<img width="1321" height="613" alt="image" src="https://github.com/user-attachments/assets/ff17231e-46c4-4681-877b-88b1aee53b60" />
+<img width="1318" height="605" alt="image" src="https://github.com/user-attachments/assets/013b168f-81fb-42db-a868-7cd26999d739" />
+<img width="1318" height="581" alt="image" src="https://github.com/user-attachments/assets/d6a98374-ca57-4829-8021-9b4b4d811c94" />
+<img width="1320" height="593" alt="image" src="https://github.com/user-attachments/assets/f7cb15a4-8741-4967-910a-bb7bc22588a7" />
 
 ---
 
@@ -201,8 +199,11 @@ Password: Admin@123
 ## 👨‍💻 Author
 
 SnehaKhanaganvi
+
 Darshan S P
+
 NamrathaGudigar
+
 Venkat Naveen
 
 ---
@@ -216,5 +217,3 @@ This project is built as a final-year project with real-world architecture and A
 ## 📜 License
 
 This project is open-source and available under the MIT License.
-```
-
